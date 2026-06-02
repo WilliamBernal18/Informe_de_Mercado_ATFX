@@ -1,0 +1,455 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#0D1B2A;color:#fff;}
+.nl{max-width:920px;margin:0 auto;background:#0D1B2A;}
+
+/* ── COVER ── */
+.cover{background:linear-gradient(145deg,#1B3A62 0%,#0D1B2A 50%,#152A44 100%);padding:64px 52px 52px;text-align:center;position:relative;overflow:hidden;border-bottom:3px solid #E8572A;}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 20%,rgba(232,87,42,.11) 0%,transparent 55%);pointer-events:none;}
+.atfx-logo{font-size:60px;font-weight:900;letter-spacing:8px;color:#fff;display:inline-flex;align-items:center;}
+.a-let{position:relative;display:inline-block;}
+.a-let::after{content:'';position:absolute;bottom:35%;left:-3px;right:-3px;height:5px;background:#E8572A;border-radius:2px;}
+.badge{font-size:10px;font-weight:700;letter-spacing:2px;color:#E8572A;background:rgba(232,87,42,.13);border:1px solid rgba(232,87,42,.35);border-radius:6px;padding:4px 13px;margin-left:20px;vertical-align:middle;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:5px;color:#4A6A85;text-transform:uppercase;margin:22px 0 0;}
+.divider{width:50px;height:3px;background:#E8572A;margin:18px auto;border-radius:2px;}
+.cover-h1{font-size:36px;font-weight:900;line-height:1.15;color:#fff;max-width:700px;margin:0 auto 16px;}
+.cover-h1 em{color:#E8572A;font-style:normal;}
+.cover-date{font-size:11px;font-weight:500;letter-spacing:2px;color:#4A6A85;text-transform:uppercase;margin-bottom:26px;}
+.tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:10px;color:#5A7A95;font-weight:500;letter-spacing:1px;}
+
+/* ── SECTIONS ── */
+section{padding:48px 52px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:#E8572A;text-transform:uppercase;margin-bottom:6px;}
+.ttl{font-size:22px;font-weight:800;color:#fff;margin-bottom:28px;}
+
+/* ── SNAPSHOT ── */
+.snap-s{background:#111E2E;border-bottom:1px solid rgba(255,255,255,.05);}
+.snap-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.sc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 15px;}
+.sc.up{border-top:3px solid #2ECC71;}.sc.dn{border-top:3px solid #E74C3C;}.sc.ht{border-top:3px solid #E8572A;}
+.sc-lbl{font-size:9px;font-weight:700;letter-spacing:2px;color:#3A5870;text-transform:uppercase;margin-bottom:8px;}
+.sc-val{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.sc-chg{font-size:11px;font-weight:700;margin-bottom:3px;}
+.sc-chg.up{color:#2ECC71;}.sc-chg.dn{color:#E74C3C;}.sc-chg.ht{color:#E8572A;}
+.sc-note{font-size:10px;color:#3A5870;line-height:1.4;}
+
+/* ── MACRO ── */
+.macro-s{background:#0D1B2A;}
+.macro-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.mb{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 22px;position:relative;overflow:hidden;}
+.mb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#E8572A,transparent);}
+.mb-icon{font-size:26px;display:block;margin-bottom:12px;}
+.mb-ttl{font-size:10px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:16px;}
+.mb ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.mb li{font-size:11.5px;color:#7A9AB0;padding-left:14px;position:relative;line-height:1.5;}
+.mb li::before{content:'▸';position:absolute;left:0;color:#E8572A;font-size:9px;top:3px;}
+.mb li strong{color:#C8D8E8;font-weight:700;}
+
+/* ── CHART ── */
+.chart-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);}
+.chart-wrap{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;}
+.hormuz{background:rgba(232,87,42,.05);border:1px solid rgba(232,87,42,.14);border-radius:10px;padding:22px 26px;margin-top:20px;}
+.hormuz-ttl{font-size:10px;font-weight:700;letter-spacing:2px;color:#E8572A;text-transform:uppercase;margin-bottom:16px;}
+.h-row{margin-bottom:13px;}
+.h-lbl{display:flex;justify-content:space-between;font-size:11px;color:#4A6A80;margin-bottom:6px;}
+.h-lbl strong{font-weight:700;}
+.h-track{background:rgba(255,255,255,.06);border-radius:4px;height:9px;overflow:hidden;}
+.h-fill{height:100%;border-radius:4px;}
+.h-note{font-size:11px;color:#4A6A80;line-height:1.65;margin-top:10px;}
+.h-note strong{color:#8AABB8;}
+
+/* ── TOP NEWS ── */
+.news-s{background:#0D1B2A;}
+.news-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.nc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;}
+.nc-head{background:linear-gradient(135deg,#1B3A62,#0E1F32);padding:22px;border-bottom:2px solid #E8572A;}
+.nc-num{font-size:42px;font-weight:900;color:rgba(232,87,42,.2);line-height:1;margin-bottom:8px;}
+.nc-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.nc-ttl{font-size:14px;font-weight:700;color:#fff;line-height:1.3;}
+.nc-body{padding:20px 22px;}
+.nc-txt{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.nc-txt strong{color:#B0C8D8;}
+.stat{display:inline-block;background:rgba(232,87,42,.1);border:1px solid rgba(232,87,42,.22);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#E8572A;margin:2px 1px;}
+
+/* ── EXTENDED ── */
+.ext-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);}
+.ext-g{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.ec{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px;}
+.ec-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.ec-ttl{font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3;}
+.ec-body{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.ec-body strong{color:#9AAABB;}
+.etag{display:inline-block;background:rgba(255,255,255,.05);border-radius:4px;padding:2px 8px;font-size:9.5px;color:#4A6A7A;margin:5px 3px 0 0;}
+
+/* ── FOOTER ── */
+footer{background:#080F18;padding:40px 52px;border-top:2px solid rgba(232,87,42,.2);}
+.f-logo{font-size:22px;font-weight:900;letter-spacing:5px;color:#fff;margin-bottom:4px;}
+.f-sub{font-size:9px;font-weight:700;letter-spacing:2px;color:#E8572A;margin-bottom:18px;}
+.f-div{height:1px;background:rgba(255,255,255,.05);margin:18px 0;}
+.f-disc{font-size:10px;color:#2A3D4D;line-height:1.8;}
+.f-disc strong{color:#3A5060;}
+
+@media(max-width:720px){
+  section{padding:32px 20px;}
+  .cover{padding:40px 20px 36px;}
+  .snap-g{grid-template-columns:1fr 1fr;}
+  .macro-g,.news-g,.ext-g{grid-template-columns:1fr;}
+  .cover-h1{font-size:26px;}
+  .atfx-logo{font-size:42px;}
+}
+</style>
+
+<div class="nl">
+
+<!-- ══ PORTADA ══ -->
+<header class="cover">
+  <div>
+    <div class="atfx-logo"><span class="a-let">A</span>TFX<span class="badge">MARKET REPORT</span></div>
+  </div>
+  <div class="eyebrow">Reporte Diario · Mayo 20, 2026</div>
+  <div class="divider"></div>
+  <h1 class="cover-h1">Entre Trump, Irán y la <em>nueva Fed</em>:<br>mercados en tensión máxima</h1>
+  <div class="cover-date">Miércoles, 20 de Mayo de 2026 &nbsp;·&nbsp; ATFX Market Intelligence</div>
+  <div class="tags">
+    <span class="tag">XAU/USD</span>
+    <span class="tag">DXY +0.75%</span>
+    <span class="tag">BRENT ~$108</span>
+    <span class="tag">S&amp;P 500</span>
+    <span class="tag">NVIDIA +4.7%</span>
+    <span class="tag">GEOPOLÍTICA</span>
+    <span class="tag">FED · WARSH</span>
+  </div>
+</header>
+
+<!-- ══ MARKET SNAPSHOT ══ -->
+<section class="snap-s">
+  <div class="lbl">Mercados en Cifras</div>
+  <div class="ttl">Market Snapshot</div>
+  <div class="snap-g">
+    <div class="sc dn">
+      <div class="sc-lbl">XAU/USD · Oro</div>
+      <div class="sc-val">$4,575</div>
+      <div class="sc-chg dn">▼ Más de −3% en sesión</div>
+      <div class="sc-note">Mínimo ~$4,560 · Rebote desde mínimos</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">DXY · Índice Dólar</div>
+      <div class="sc-val">99.20</div>
+      <div class="sc-chg up">▲ +0.75% en sesión</div>
+      <div class="sc-note">Rally explosivo del billete verde</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">EUR/USD</div>
+      <div class="sc-val">&lt;1.1650</div>
+      <div class="sc-chg dn">▼ Ruptura de soporte clave</div>
+      <div class="sc-note">Refleja fortaleza amplia del USD</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">S&amp;P 500 E-Mini Fut.</div>
+      <div class="sc-val">7,482</div>
+      <div class="sc-chg dn">▼ Máx. sesión: 7,540</div>
+      <div class="sc-note">Retroceso −0.77% desde máximos</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">NASDAQ 100 Fut.</div>
+      <div class="sc-val">29,425</div>
+      <div class="sc-chg dn">▼ Máx. sesión: 29,782</div>
+      <div class="sc-note">Retrocede −1.20% desde máximos</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">BRENT Spot · Petróleo</div>
+      <div class="sc-val">~$108</div>
+      <div class="sc-chg up">▲ Impulso alcista renovado</div>
+      <div class="sc-note">Pico en marzo 2026: $119/barril</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">BTC/USD · Bitcoin</div>
+      <div class="sc-val">$80,715</div>
+      <div class="sc-chg dn">▼ Recuperación en curso</div>
+      <div class="sc-note">Rompió $80K · Rebotó a $82K</div>
+    </div>
+    <div class="sc ht">
+      <div class="sc-lbl">NVIDIA · NVDA</div>
+      <div class="sc-val">$236.47</div>
+      <div class="sc-chg ht">▲ +4.7% · +20% en 7 días</div>
+      <div class="sc-note">Cap. de mercado: ~$6 billones</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MACRO ANÁLISIS ══ -->
+<section class="macro-s">
+  <div class="lbl">Análisis de Fondo</div>
+  <div class="ttl">Tres Vectores que Mueven el Mercado</div>
+  <div class="macro-g">
+    <div class="mb">
+      <span class="mb-icon">🏛️</span>
+      <div class="mb-ttl">Reserva Federal</div>
+      <ul>
+        <li><strong>Powell renuncia hoy</strong> → Kevin Warsh asume el mando</li>
+        <li>IPC + IPP ambos al alza → <strong>sin recortes de tasas en 2026</strong></li>
+        <li>T2Y: <strong>+50 pbs</strong> en el año · T30Y: <strong>+20 pbs</strong>, supera el 5%</li>
+        <li>Tasa media deuda federal: <strong>~3.5%</strong> (casi 3× vs. hace 5 años)</li>
+        <li>División entre facciones Powell / Warsh en la Junta</li>
+        <li>~<strong>$8 billones USD</strong> aparcados en fondos monetarios</li>
+        <li>Fed compra ~<strong>$40,000M</strong> en letras del Tesoro al mes</li>
+        <li>Riesgo: ciclo vicioso tasas↑ → déficit↑ → inflación↑</li>
+      </ul>
+    </div>
+    <div class="mb">
+      <span class="mb-icon">🌐</span>
+      <div class="mb-ttl">Geopolítica Global</div>
+      <ul>
+        <li><strong>Ormuz:</strong> ~30 buques desde el miérc. vs. <strong>140/día</strong> normales</li>
+        <li>Kpler: solo <strong>10 barcos/24h</strong> en el estrecho la semana pasada</li>
+        <li>Petróleo pico: <strong>$119/barril</strong> (marzo 2026); Brent hoy: ~$108</li>
+        <li>Exportaciones del Golfo: <strong>−57%</strong> vs. niveles pre-bélicos</li>
+        <li>Trump-Xi en Pekín: Xi no enviará armas a Irán; pide reapertura del estrecho</li>
+        <li>Taiwán: venta armas EE.UU. de <strong>$14,000M</strong> en suspenso; Xi advierte "enfrentamientos"</li>
+        <li>Rusia: <strong>>1,500 drones</strong> contra Ucrania — el mayor ataque de la historia</li>
+        <li>Modi insta a India a <strong>no comprar oro</strong> para preservar reservas nacionales</li>
+      </ul>
+    </div>
+    <div class="mb">
+      <span class="mb-icon">📊</span>
+      <div class="mb-ttl">Mercados &amp; Corporativo</div>
+      <ul>
+        <li><strong>Nvidia</strong> cerca de cap. de <strong>$6 billones</strong> — hito sin precedentes</li>
+        <li>Philadelphia Semiconductor Index: <strong>+70%</strong> desde finales de marzo</li>
+        <li>NVDA + Micron = <strong>>30%</strong> de la ganancia total del S&amp;P 500 en 2026</li>
+        <li>Preocupaciones de <strong>burbuja de IA</strong> ante concentración extrema</li>
+        <li>Monedas EM más golpeadas: EGP, PHP, KRW, THB</li>
+        <li>China: <strong>70%</strong> extracción · <strong>85%</strong> refinado · <strong>99%</strong> disprosio/terbio</li>
+        <li>Escasez de <strong>GNL</strong> global persistirá hasta <strong>2027</strong></li>
+        <li>Shell y BP sin gasolina en <strong>Indonesia</strong> por choque energético</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GRÁFICO ══ -->
+<section class="chart-s">
+  <div class="lbl">Análisis Visual</div>
+  <div class="ttl">Rendimiento de Sesión — Activos Clave</div>
+  <div class="chart-wrap">
+    <svg viewBox="0 0 820 415" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+      <defs>
+        <linearGradient id="nvGr" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F07040"/><stop offset="100%" stop-color="#A03515"/>
+        </linearGradient>
+        <linearGradient id="auGr" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#C0392B"/><stop offset="100%" stop-color="#7B241C"/>
+        </linearGradient>
+        <linearGradient id="dxGr" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#1A7A45"/>
+        </linearGradient>
+      </defs>
+      <rect width="820" height="415" fill="#07121E"/>
+      <!-- Títulos -->
+      <text x="410" y="28" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.85)">RENDIMIENTO DE SESIÓN — ACTIVOS CLAVE</text>
+      <text x="410" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Mayo 20, 2026  ·  Variación estimada en sesión  ·  Fuente: ATFX Market Report</text>
+      <!-- Cuadrícula: zero y=252, escala 35px/% -->
+      <!-- +5%=77 +4%=112 +3%=147 +2%=182 +1%=217 | 0%=252 | -1%=287 -2%=322 -3%=357 -->
+      <line x1="150" y1="77"  x2="780" y2="77"  stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <line x1="150" y1="112" x2="780" y2="112" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <line x1="150" y1="147" x2="780" y2="147" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <line x1="150" y1="182" x2="780" y2="182" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <line x1="150" y1="217" x2="780" y2="217" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="150" y1="252" x2="780" y2="252" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+      <line x1="150" y1="287" x2="780" y2="287" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="150" y1="322" x2="780" y2="322" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <line x1="150" y1="357" x2="780" y2="357" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <!-- Etiquetas Y -->
+      <text x="143" y="81"  text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">+5%</text>
+      <text x="143" y="116" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">+4%</text>
+      <text x="143" y="151" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">+3%</text>
+      <text x="143" y="186" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">+2%</text>
+      <text x="143" y="221" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">+1%</text>
+      <text x="143" y="256" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.5)">0%</text>
+      <text x="143" y="291" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">−1%</text>
+      <text x="143" y="326" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">−2%</text>
+      <text x="143" y="361" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">−3%</text>
+      <!-- BASE label -->
+      <text x="155" y="248" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.38)">BASE</text>
+      <!-- ─ BARRAS ─ (5 barras, ancho=78, gap=32) -->
+      <!-- Área x=150..780=630px | barras=5×78+4×32=390+128=518 | offset=(630-518)/2=56 | 1ª barra x=206 -->
+      <!-- Centros: 206+39=245 | 316+39=355 | 426+39=465 | 536+39=575 | 646+39=685 -->
+
+      <!-- 1. XAU/USD −3.10% → baja 109px desde y=252 -->
+      <rect x="206" y="252" width="78" height="109" fill="url(#auGr)" rx="5" opacity=".9"/>
+      <text x="245" y="312" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="800" fill="rgba(255,255,255,.9)">−3.1%</text>
+      <text x="245" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.6)">XAU/USD</text>
+      <text x="245" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">$4,575</text>
+
+      <!-- 2. NASDAQ −1.20% → baja 42px -->
+      <rect x="316" y="252" width="78" height="42" fill="#C0392B" rx="5" opacity=".85"/>
+      <text x="355" y="278" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="800" fill="rgba(255,255,255,.9)">−1.2%</text>
+      <text x="355" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.6)">NASDAQ</text>
+      <text x="355" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">29,425</text>
+
+      <!-- 3. S&P 500 −0.77% → baja 27px -->
+      <rect x="426" y="252" width="78" height="27" fill="#E74C3C" rx="5" opacity=".8"/>
+      <text x="465" y="293" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="#E74C3C">−0.77%</text>
+      <text x="465" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.6)">S&amp;P 500</text>
+      <text x="465" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">7,482</text>
+
+      <!-- 4. DXY +0.75% → sube 26px -->
+      <rect x="536" y="226" width="78" height="26" fill="url(#dxGr)" rx="5" opacity=".85"/>
+      <text x="575" y="216" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="#2ECC71">+0.75%</text>
+      <text x="575" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.6)">DXY</text>
+      <text x="575" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">99.20</text>
+
+      <!-- 5. NVIDIA +4.70% → sube 165px -->
+      <rect x="646" y="87" width="78" height="165" fill="url(#nvGr)" rx="5" opacity=".92"/>
+      <rect x="646" y="87" width="78" height="165" fill="none" stroke="rgba(240,112,64,.4)" stroke-width="1" rx="5"/>
+      <text x="685" y="175" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="15" font-weight="900" fill="rgba(255,255,255,.95)">+4.7%</text>
+      <text x="685" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,.6)">NVIDIA</text>
+      <text x="685" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.28)">$236.47</text>
+
+      <!-- Leyenda -->
+      <rect x="206" y="404" width="10" height="6" fill="#C0392B" rx="1"/>
+      <text x="220" y="410" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Caída en sesión</text>
+      <rect x="330" y="404" width="10" height="6" fill="#2ECC71" rx="1"/>
+      <text x="344" y="410" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">Alza en sesión</text>
+      <rect x="450" y="404" width="10" height="6" fill="#E8572A" rx="1"/>
+      <text x="464" y="410" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">ATFX Destacado</text>
+    </svg>
+  </div>
+
+  <!-- Visual Ormuz -->
+  <div class="hormuz">
+    <div class="hormuz-ttl">⚓ Estrecho de Ormuz — Tráfico Marítimo Actual vs. Normal</div>
+    <div class="h-row">
+      <div class="h-lbl">
+        <span>Tráfico actual · post-guerra (Kpler: 10 barcos/24h última semana)</span>
+        <strong style="color:#E8572A;">~30 buques desde el miércoles</strong>
+      </div>
+      <div class="h-track"><div class="h-fill" style="width:21.4%;background:#E8572A;"></div></div>
+    </div>
+    <div class="h-row">
+      <div class="h-lbl">
+        <span>Tráfico normal · pre-guerra (referencia base)</span>
+        <strong style="color:#2ECC71;">~140 buques/día</strong>
+      </div>
+      <div class="h-track"><div class="h-fill" style="width:100%;background:rgba(46,204,113,.38);"></div></div>
+    </div>
+    <div class="h-note">
+      Exportaciones del Golfo Pérsico: <strong>−57%</strong> vs. niveles pre-bélicos. EE.UU. mantiene bloqueo de puertos iraníes. Conversaciones diplomáticas estancadas. Escasez global de GNL persistirá hasta <strong>2027</strong>.
+    </div>
+  </div>
+</section>
+
+<!-- ══ TOP 3 NOTICIAS ══ -->
+<section class="news-s">
+  <div class="lbl">Eventos que Mueven el Mercado</div>
+  <div class="ttl">Top 3 Noticias</div>
+  <div class="news-g">
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">01</div>
+        <div class="nc-cat">Geopolítica · Comercio</div>
+        <div class="nc-ttl">Cumbre Trump-Xi: Acuerdos Comerciales, Tierras Raras y la Sombra de Taiwán</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Trump declara "acuerdos comerciales fantásticos" en Pekín (2° día). China prometería miles de millones en compras agrícolas de EE.UU. Xi ofrece ayuda con Irán y Pekín urge la reapertura del Estrecho de Ormuz.</p><br>
+        <p class="nc-txt"><strong>La agenda real:</strong> acceso a tierras raras. China domina <span class="stat">70% extracción</span> <span class="stat">85% refinado</span> <span class="stat">90% imanes permanentes</span> <span class="stat">99% disprosio/terbio</span>. Sin ellas: el F-35 no despega, la MRI no funciona, el iPhone no enciende. Tesla, Apple, Boeing y GE Aerospace son los más expuestos.</p><br>
+        <p class="nc-txt">Xi advirtió sobre Taiwán: podría conducir a "enfrentamientos". Venta de armas EE.UU. de <span class="stat">$14,000M</span> a Taipei en suspenso. Xi visitará la Casa Blanca en <strong>septiembre 2026</strong>. La Corte Suprema anuló los gravámenes de Trump, fortaleciendo la mano de Xi.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">02</div>
+        <div class="nc-cat">Macro · Metales · Fed</div>
+        <div class="nc-ttl">Oro Colapsa Más del 3%: Patrón Falla, Powell Sale y el Dólar Arrasa</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Un patrón tipo <strong>cuna alcista ha fallado</strong>, desencadenando salidas masivas. El oro cayó más del 3% hasta <span class="stat">~$4,560</span> antes de rebotar a ~$4,575. EUR/USD rompe soporte de <span class="stat">1.1650</span>.</p><br>
+        <p class="nc-txt"><strong>Drivers bajistas simultáneos:</strong> IPC + IPP al alza → sin recortes en 2026. <span class="stat">DXY +0.75%</span> a 99.20. Powell cede el mando a <strong>Kevin Warsh</strong> hoy, generando división interna en la Junta. Modi pide a India frenar la compra de oro para preservar reservas nacionales.</p><br>
+        <p class="nc-txt">T30Y supera el <span class="stat">5%</span>. T2Y sube <span class="stat">+50 pbs</span> en 2026 vs. +20 pbs del T30Y, cerca del 4%. Tasa media deuda federal: ~3.5% (casi 3× hace 5 años). El Tesoro, expuesto a mayores costos de refinanciamiento cada vez que renueva deuda.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">03</div>
+        <div class="nc-cat">Energía · Crisis Global</div>
+        <div class="nc-ttl">Ormuz Semicerrado: Choque Energético Histórico Remodela Divisas y Economías</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Solo <span class="stat">~30 buques</span> cruzaron el estrecho desde el miércoles vs. <span class="stat">~140/día</span> normales. Irán negocia el paso caso por caso: un petrolero japonés cruzó tras gestión del premier japonés; un enorme petrolero chino también lo hizo.</p><br>
+        <p class="nc-txt">Petróleo: pico <strong>$119/barril en marzo 2026</strong>. Brent spot acercándose a <span class="stat">~$108</span>. Exportaciones del Golfo: <span class="stat">−57%</span>. Choque energético eleva inflación y cierra la puerta a recortes de la Fed. GNL global ajustado hasta <strong>2027</strong>.</p><br>
+        <p class="nc-txt">Monedas EM más afectadas: <strong>libra egipcia, peso filipino, won coreano y baht tailandés</strong>. Grandes importadores (Corea del Sur, Tailandia, Filipinas) enfrentan déficits por cuenta corriente ampliados y salida de capitales. Estaciones Shell y BP sin gasolina en Indonesia.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ANÁLISIS EXTENDIDO ══ -->
+<section class="ext-s">
+  <div class="lbl">Más Noticias Relevantes</div>
+  <div class="ttl">Análisis Extendido</div>
+  <div class="ext-g">
+
+    <div class="ec">
+      <div class="ec-cat">🇬🇧 Diplomacia · Asia</div>
+      <div class="ec-ttl">UK-China: Yvette Cooper Viaja a Pekín y Shenzhen el 2–3 de Junio</div>
+      <div class="ec-body">
+        La secretaria de Exteriores británica se reunirá con el canciller <strong>Wang Yi</strong> en Pekín antes de viajar a Shenzhen para reunirse con empresas tecnológicas chinas. La visita capitaliza el impulso del viaje del PM Starmer en enero, que resultó en la aprobación de una nueva embajada china en Londres y el levantamiento de sanciones sobre seis legisladores británicos.<br><br>
+        Punto de fricción: el bloqueo de la firma eólica china <strong>Ming Yang</strong> de proyectos offshore por motivos de seguridad frustró a Pekín. En riesgo: inversión de <strong>£1,500M</strong> en Escocia. Revisión del Tribunal Superior prevista para <strong>junio–julio 2026</strong>. Si el proyecto vuelve a bloquearse, Pekín responderá.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Diplomacia</span><span class="etag">Reino Unido</span><span class="etag">China</span><span class="etag">Energía Verde</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🏛️ Política · Reino Unido</div>
+      <div class="ec-ttl">Josh Simons Renuncia y Abre la Puerta a Andy Burnham</div>
+      <div class="ec-body">
+        Simons anuncia su renuncia al escaño de <strong>Makerfield</strong> (Greater Manchester), desencadenando una elección parcial. Andy Burnham —único político senior con aprobación neta <strong>positiva</strong> entre los votantes— tendría una vía de regreso a los Comunes, requisito previo para candidatarse al liderazgo laborista.<br><br>
+        Burnham necesitaría ganar la elección (no garantizado ante el auge populista) y asegurar el respaldo de <strong>81 diputados laboristas</strong>. El PM Starmer, debilitado por perder un escaño ante el Partido Verde y por resultados electorales locales desastrosos, enfrenta llamados de diputados y ministros del gabinete a fijar un <strong>calendario de salida</strong>.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Reino Unido</span><span class="etag">Labour</span><span class="etag">Burnham</span><span class="etag">Starmer</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🚁 Conflicto · Europa del Este</div>
+      <div class="ec-ttl">Rusia Lanza Más de 1,500 Drones — Uno de los Mayores Ataques de la Historia</div>
+      <div class="ec-body">
+        Ataque masivo presentado como represalia por drones ucranianos en ciudades rusas durante el alto el fuego del Día de la Victoria. Apuntó a Kiev y otras ciudades. La oficina de la empresa de drones <strong>Skyeton</strong> fue alcanzada deliberadamente.<br><br>
+        El NYT informa que Rusia ataca sistemáticamente almacenes y fábricas de <strong>Cargill, Coca-Cola, Boeing, Mondelez y Philip Morris</strong> en Ucrania desde el verano pasado. Ejecutivos advierten al Senado que son ataques deliberados para disuadir la inversión extranjera. <strong>Estonia</strong> pide a Ucrania que controle mejor sus drones tras incursiones en Letonia. El ministro de defensa letón fue destituido.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Rusia</span><span class="etag">Ucrania</span><span class="etag">OTAN</span><span class="etag">Estonia</span><span class="etag">Letonia</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🔥 Tech · IA · Semiconductores</div>
+      <div class="ec-ttl">Nvidia a un Paso de $6 Billones: ¿Rally Histórico o Burbuja de IA?</div>
+      <div class="ec-body">
+        Nvidia extendió su rally hasta <strong>$236.47 (+4.7% en sesión)</strong>, añadiendo más de <strong>$900,000M</strong> a su capitalización y acercándose a <strong>$6 billones</strong> — hito nunca alcanzado por ninguna firma. El CEO Jensen Huang se unió a Trump como incorporación de último minuto en la delegación a China.<br><br>
+        El índice Philadelphia Semiconductor subió casi <strong>+70%</strong> desde finales de marzo. Intel, Micron, AMD y Broadcom también registran ganancias notables. Solo NVDA y Micron representan <strong>más del 30%</strong> de toda la ganancia del S&amp;P 500 en 2026. Esta concentración extrema alimenta los temores de una <strong>burbuja de IA</strong> inflando el mercado.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Nvidia</span><span class="etag">Jensen Huang</span><span class="etag">IA</span><span class="etag">Semiconductores</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo">ATFX</div>
+  <div class="f-sub">MARKET INTELLIGENCE · DAILY REPORT · MAYO 2026</div>
+  <div class="f-div"></div>
+  <div class="f-disc">
+    <strong>AVISO DE RIESGO:</strong> La negociación de divisas (Forex) y contratos por diferencia (CFDs) en productos como índices, materias primas, acciones y criptomonedas conlleva un alto nivel de riesgo y puede no ser adecuada para todos los inversores. El valor de su inversión puede tanto aumentar como disminuir, y podría recibir menos de lo que invirtió originalmente. Antes de operar, asegúrese de comprender completamente los riesgos involucrados y, si es necesario, busque asesoramiento financiero independiente. Los CFDs son instrumentos complejos que conllevan un alto riesgo de perder dinero rápidamente debido al apalancamiento.
+    <br><br>
+    <strong>AVISO LEGAL:</strong> Este informe ha sido preparado únicamente con fines informativos y no constituye asesoramiento de inversión, recomendación ni oferta o solicitud de compra o venta de ningún instrumento financiero. La información contenida se ha obtenido de fuentes consideradas fiables, pero ATFX no garantiza su exactitud, integridad ni actualidad. Las opiniones expresadas son las de los analistas en la fecha de publicación y están sujetas a cambios sin previo aviso. El rendimiento pasado no es indicativo de resultados futuros.
+    <br><br>
+    © 2026 ATFX. Todos los derechos reservados. ATFX es un nombre comercial de AT Global Markets (UK) Ltd, autorizado y regulado por la Financial Conduct Authority (FCA) del Reino Unido.
+  </div>
+</footer>
+
+</div>
