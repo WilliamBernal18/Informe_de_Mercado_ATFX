@@ -1,0 +1,430 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#0D1B2A;color:#fff;}
+.nl{max-width:920px;margin:0 auto;background:#0D1B2A;}
+
+.cover{background:linear-gradient(145deg,#1B3A62 0%,#0D1B2A 50%,#152A44 100%);padding:64px 52px 52px;text-align:center;position:relative;overflow:hidden;border-bottom:3px solid #E8572A;}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 20%,rgba(232,87,42,.11) 0%,transparent 55%);pointer-events:none;}
+.atfx-logo{font-size:60px;font-weight:900;letter-spacing:8px;color:#fff;display:inline-flex;align-items:center;}
+.a-let{position:relative;display:inline-block;}
+.a-let::after{content:'';position:absolute;bottom:35%;left:-3px;right:-3px;height:5px;background:#E8572A;border-radius:2px;}
+.badge{font-size:10px;font-weight:700;letter-spacing:2px;color:#E8572A;background:rgba(232,87,42,.13);border:1px solid rgba(232,87,42,.35);border-radius:6px;padding:4px 13px;margin-left:20px;vertical-align:middle;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:5px;color:#4A6A85;text-transform:uppercase;margin:22px 0 0;}
+.divider{width:50px;height:3px;background:#E8572A;margin:18px auto;border-radius:2px;}
+.cover-h1{font-size:34px;font-weight:900;line-height:1.15;color:#fff;max-width:720px;margin:0 auto 16px;}
+.cover-h1 em{color:#E8572A;font-style:normal;}
+.cover-date{font-size:11px;font-weight:500;letter-spacing:2px;color:#4A6A85;text-transform:uppercase;margin-bottom:26px;}
+.tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:10px;color:#5A7A95;font-weight:500;letter-spacing:1px;}
+
+section{padding:48px 52px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:#E8572A;text-transform:uppercase;margin-bottom:6px;}
+.ttl{font-size:22px;font-weight:800;color:#fff;margin-bottom:28px;}
+
+.snap-s{background:#111E2E;border-bottom:1px solid rgba(255,255,255,.05);}
+.snap-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.sc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 15px;}
+.sc.up{border-top:3px solid #2ECC71;}.sc.dn{border-top:3px solid #E74C3C;}.sc.ht{border-top:3px solid #E8572A;}.sc.nt{border-top:3px solid #5A8AA5;}
+.sc-lbl{font-size:9px;font-weight:700;letter-spacing:2px;color:#3A5870;text-transform:uppercase;margin-bottom:8px;}
+.sc-val{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.sc-chg{font-size:11px;font-weight:700;margin-bottom:3px;}
+.sc-chg.up{color:#2ECC71;}.sc-chg.dn{color:#E74C3C;}.sc-chg.ht{color:#E8572A;}.sc-chg.nt{color:#5A8AA5;}
+.sc-note{font-size:10px;color:#3A5870;line-height:1.4;}
+
+.macro-s{background:#0D1B2A;}
+.macro-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.mb{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 22px;position:relative;overflow:hidden;}
+.mb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#E8572A,transparent);}
+.mb-icon{font-size:26px;display:block;margin-bottom:12px;}
+.mb-ttl{font-size:10px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:16px;}
+.mb ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.mb li{font-size:11.5px;color:#7A9AB0;padding-left:14px;position:relative;line-height:1.5;}
+.mb li::before{content:'▸';position:absolute;left:0;color:#E8572A;font-size:9px;top:3px;}
+.mb li strong{color:#C8D8E8;font-weight:700;}
+
+.chart-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);}
+.chart-wrap{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;}
+
+.alert-box{background:rgba(232,87,42,.06);border:1px solid rgba(232,87,42,.2);border-radius:10px;padding:20px 24px;margin-top:20px;display:flex;gap:16px;align-items:flex-start;}
+.alert-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.alert-body{font-size:12px;color:#7A9AB0;line-height:1.65;}
+.alert-body strong{color:#E8572A;font-weight:700;}
+.alert-body em{color:#C8D8E8;font-style:normal;}
+
+.news-s{background:#0D1B2A;}
+.news-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.nc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;}
+.nc-head{background:linear-gradient(135deg,#1B3A62,#0E1F32);padding:22px;border-bottom:2px solid #E8572A;}
+.nc-num{font-size:42px;font-weight:900;color:rgba(232,87,42,.2);line-height:1;margin-bottom:8px;}
+.nc-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.nc-ttl{font-size:14px;font-weight:700;color:#fff;line-height:1.3;}
+.nc-body{padding:20px 22px;}
+.nc-txt{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.nc-txt strong{color:#B0C8D8;}
+.stat{display:inline-block;background:rgba(232,87,42,.1);border:1px solid rgba(232,87,42,.22);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#E8572A;margin:2px 1px;}
+.stat-g{display:inline-block;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.2);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#2ECC71;margin:2px 1px;}
+
+.ext-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);}
+.ext-g{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.ec{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px;}
+.ec-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.ec-ttl{font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3;}
+.ec-body{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.ec-body strong{color:#9AAABB;}
+.etag{display:inline-block;background:rgba(255,255,255,.05);border-radius:4px;padding:2px 8px;font-size:9.5px;color:#4A6A7A;margin:5px 3px 0 0;}
+
+.quote-box{background:rgba(255,255,255,.03);border-left:3px solid #E8572A;padding:14px 18px;border-radius:0 8px 8px 0;margin:14px 0;}
+.quote-text{font-size:11.5px;color:#8AAABB;line-height:1.65;font-style:italic;}
+.quote-attr{font-size:10px;color:#4A6A80;margin-top:6px;font-weight:600;letter-spacing:1px;}
+
+footer{background:#080F18;padding:40px 52px;border-top:2px solid rgba(232,87,42,.2);}
+.f-logo{font-size:22px;font-weight:900;letter-spacing:5px;color:#fff;margin-bottom:4px;}
+.f-sub{font-size:9px;font-weight:700;letter-spacing:2px;color:#E8572A;margin-bottom:18px;}
+.f-div{height:1px;background:rgba(255,255,255,.05);margin:18px 0;}
+.f-disc{font-size:10px;color:#2A3D4D;line-height:1.8;}
+.f-disc strong{color:#3A5060;}
+
+@media(max-width:720px){
+  section{padding:32px 20px;}
+  .cover{padding:40px 20px 36px;}
+  .snap-g{grid-template-columns:1fr 1fr;}
+  .macro-g,.news-g,.ext-g{grid-template-columns:1fr;}
+  .cover-h1{font-size:24px;}
+  .atfx-logo{font-size:42px;}
+}
+</style>
+
+<div class="nl">
+
+<!-- ══ PORTADA ══ -->
+<header class="cover">
+  <div>
+    <div class="atfx-logo"><span class="a-let">A</span>TFX<span class="badge">MARKET REPORT</span></div>
+  </div>
+  <div class="eyebrow">Reporte Semanal · Mayo 2026</div>
+  <div class="divider"></div>
+  <h1 class="cover-h1">Rally de chips, Irán y el BOJ:<br><em>mercados entre la euforia y la geopolítica</em></h1>
+  <div class="cover-date">ATFX Market Intelligence &nbsp;·&nbsp; Edición Semanal</div>
+  <div class="tags">
+    <span class="tag">S&amp;P 500 ATH</span>
+    <span class="tag">IRÁN · ACCORDS</span>
+    <span class="tag">HEZBOLLAH</span>
+    <span class="tag">BOJ +2.8%</span>
+    <span class="tag">NVIDIA</span>
+    <span class="tag">SK HYNIX +186%</span>
+    <span class="tag">GOOGLE TURBOQUANT</span>
+  </div>
+</header>
+
+<!-- ══ MARKET SNAPSHOT ══ -->
+<section class="snap-s">
+  <div class="lbl">Mercados en Cifras</div>
+  <div class="ttl">Market Snapshot</div>
+  <div class="snap-g">
+    <div class="sc up">
+      <div class="sc-lbl">S&amp;P 500 E-Mini Fut.</div>
+      <div class="sc-val">7,540</div>
+      <div class="sc-chg up">▲ Nuevos máximos históricos</div>
+      <div class="sc-note">Optimismo por negociaciones con Irán</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">NASDAQ 100</div>
+      <div class="sc-val">29,825</div>
+      <div class="sc-chg up">▲ Posición similar al S&amp;P</div>
+      <div class="sc-note">Impulsado por rally tech y chips IA</div>
+    </div>
+    <div class="sc nt">
+      <div class="sc-lbl">DXY · Índice Dólar</div>
+      <div class="sc-val">99.15</div>
+      <div class="sc-chg nt">↗ Recuperando momentum</div>
+      <div class="sc-note">Empezó semana por debajo de niveles anteriores</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">EUR/USD</div>
+      <div class="sc-val">1.1630</div>
+      <div class="sc-chg dn">▼ Resistencia en 1.1650</div>
+      <div class="sc-note">Retrocede por fortaleza del USD</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">BRENT Spot · Petróleo</div>
+      <div class="sc-val">$95.80</div>
+      <div class="sc-chg up">▲ Desde soporte $93.25</div>
+      <div class="sc-note">Cayó bajo $100 · Rebote por optimismo</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">BTC/USD · Bitcoin</div>
+      <div class="sc-val">$76,670</div>
+      <div class="sc-chg up">▲ Rebote desde mínimos</div>
+      <div class="sc-note">Cayó bajo $75,000 el fin de semana</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">DAX 40 Futuros</div>
+      <div class="sc-val">25,405</div>
+      <div class="sc-chg up">▲ Apertura europea fuerte</div>
+      <div class="sc-note">Aproximó 25,500 puntos</div>
+    </div>
+    <div class="sc nt">
+      <div class="sc-lbl">USD/JPY · Resistencia</div>
+      <div class="sc-val">159.35</div>
+      <div class="sc-chg nt">⚠ Resistencia clave 159.50</div>
+      <div class="sc-note">BOJ: 80% prob. alza de tasas en junio</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MACRO ══ -->
+<section class="macro-s">
+  <div class="lbl">Análisis de Fondo</div>
+  <div class="ttl">Tres Vectores que Mueven el Mercado</div>
+  <div class="macro-g">
+
+    <div class="mb">
+      <span class="mb-icon">🌐</span>
+      <div class="mb-ttl">Geopolítica · Irán &amp; Región</div>
+      <ul>
+        <li>Trump: negociaciones con Irán "<strong>constructivas</strong>" — pero también comparte fotos de ataques militares</li>
+        <li>Energía en "<strong>zona roja</strong>" este verano; aspiraciones de IA del Golfo en riesgo</li>
+        <li>Trump exige que <strong>Arabia Saudita, Qatar, Pakistán, Turquía, Egipto y Jordania</strong> firmen los Acuerdos de Abraham en bloque</li>
+        <li><strong>Pakistán rechazó</strong> la propuesta; linkage con acuerdo iraní visto como inviable</li>
+        <li>Arabia Saudita: no firmará sin <strong>hoja de ruta hacia un Estado palestino</strong></li>
+        <li><strong>Netanyahu</strong> ordena al IDF "intensificar golpes, aumentar potencia de fuego y aplastarlos" (Hezbollah)</li>
+        <li>Irán advierte: ataques escalados sobre Beirut podrían <strong>descarrilar el acuerdo nuclear</strong></li>
+        <li>Israel Hayom: único resultado concreto del acuerdo es la <strong>reapertura de Ormuz</strong>; lo nuclear, misiles y proxies — postergados sin fecha</li>
+      </ul>
+    </div>
+
+    <div class="mb">
+      <span class="mb-icon">🏦</span>
+      <div class="mb-ttl">Bancos Centrales · BOJ</div>
+      <ul>
+        <li>BOJ nuevo índice inflación núcleo: <strong>2.8%</strong> en abril vs. objetivo del <strong>2%</strong></li>
+        <li>Sube desde <strong>2.5%</strong> en marzo — el nuevo índice excluye factores institucionales y energía subsidiada</li>
+        <li>IPC benchmark del gobierno: solo <strong>1.4%</strong> — el nuevo índice da imagen más fiel</li>
+        <li>Vicegobernador Himino: tasas reales muy bajas → <strong>tipos seguirán subiendo</strong></li>
+        <li>Mercados descuentan <strong>80% probabilidad</strong> de alza en junio</li>
+        <li>USD/JPY: tendencia alcista clara si rompe resistencias <strong>159.35–159.50</strong></li>
+        <li>Conflicto Irán eleva inflación global → expectativas de recortes extintas en EE.UU.</li>
+      </ul>
+    </div>
+
+    <div class="mb">
+      <span class="mb-icon">📊</span>
+      <div class="mb-ttl">Mercados &amp; Tecnología</div>
+      <ul>
+        <li>S&amp;P 500 a <strong>nuevos máximos históricos</strong> de 7,540 impulsado por optimismo iraní</li>
+        <li>Goldman Sachs: hedge funds compraron tecnología a la <strong>tasa más rápida en ~3 meses</strong></li>
+        <li>Chips IA evitan impacto iraní: SK Hynix <strong>+186%</strong> · Micron <strong>+141%</strong> · SanDisk <strong>+156%</strong> · Samsung <strong>+114%</strong> en 2026</li>
+        <li>Google lanza <strong>TurboQuant</strong>: compresión que reduce <strong>6× la memoria</strong> necesaria para LLMs — golpe a stocks de chips de memoria</li>
+        <li>Riesgo: producción de chips podría crecer significativamente en los próximos <strong>3 años</strong></li>
+        <li>Debate: ¿IA ha eliminado la ciclicidad histórica de la memoria o el <strong>boom-bust</strong> volverá?</li>
+        <li>Euro Stoxx 50: <strong>6,125</strong> · DAX 40: <strong>25,405</strong> — Europa abre fuerte la semana</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ GRÁFICO ══ -->
+<section class="chart-s">
+  <div class="lbl">Análisis Visual</div>
+  <div class="ttl">Chips de Memoria IA — Rendimiento Acumulado 2026</div>
+  <div class="chart-wrap">
+    <svg viewBox="0 0 820 330" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+      <defs>
+        <linearGradient id="hynixGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#E8572A"/><stop offset="100%" stop-color="#F08050"/>
+        </linearGradient>
+        <linearGradient id="sandiskGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#C0392B"/><stop offset="100%" stop-color="#E05040"/>
+        </linearGradient>
+        <linearGradient id="micronGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1B3A62"/><stop offset="100%" stop-color="#2E6090"/>
+        </linearGradient>
+        <linearGradient id="samsungGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1A5276"/><stop offset="100%" stop-color="#2874A6"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="820" height="330" fill="#07121E"/>
+
+      <!-- Título -->
+      <text x="410" y="28" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.85)">CHIPS DE MEMORIA IA — RENDIMIENTO ACUMULADO 2026 (YTD)</text>
+      <text x="410" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Impulsados por demanda de HBM para IA  ·  Riesgo: Google TurboQuant (−6× memoria)  ·  Fuente: ATFX Market Report</text>
+
+      <!-- Cuadrícula vertical (escala 0–200%) -->
+      <!-- Area barras: x=215 a x=795 = 580px | 200% = 580px | 1% = 2.9px -->
+      <!-- 0%=215, 50%=360, 100%=505, 150%=650, 200%=795 -->
+      <line x1="215" y1="58" x2="215" y2="275" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+      <line x1="360" y1="58" x2="360" y2="275" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="505" y1="58" x2="505" y2="275" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="650" y1="58" x2="650" y2="275" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="795" y1="58" x2="795" y2="275" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+
+      <!-- Etiquetas eje X -->
+      <text x="215" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.4)">0%</text>
+      <text x="360" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">+50%</text>
+      <text x="505" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">+100%</text>
+      <text x="650" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">+150%</text>
+      <text x="795" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">+200%</text>
+
+      <!-- BASE label -->
+      <text x="218" y="54" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.35)">BASE</text>
+
+      <!-- ─ BARRAS HORIZONTALES ─ -->
+      <!-- Escala: 1% = 2.9px, x_start=215 -->
+      <!-- SK Hynix +186% → width=186×2.9=539.4≈540 | Row y=65 -->
+      <!-- SanDisk +156% → width=156×2.9=452.4≈452 | Row y=120 -->
+      <!-- Micron +141% → width=141×2.9=408.9≈409 | Row y=175 -->
+      <!-- Samsung +114% → width=114×2.9=330.6≈331 | Row y=230 (wait y needs to be consistent) -->
+      <!-- Row centers: 82, 137, 192, 247 | bar height=34 -->
+
+      <!-- 1. SK Hynix +186% -->
+      <rect x="215" y="65" width="540" height="34" fill="url(#hynixGr)" rx="4" opacity=".9"/>
+      <rect x="215" y="65" width="540" height="34" fill="none" stroke="rgba(232,87,42,.35)" stroke-width="1" rx="4"/>
+      <text x="205" y="87" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">SK Hynix</text>
+      <text x="762" y="87" text-anchor="start" font-family="Montserrat,sans-serif" font-size="13" font-weight="900" fill="#fff">+186%</text>
+
+      <!-- 2. SanDisk +156% -->
+      <rect x="215" y="120" width="452" height="34" fill="url(#sandiskGr)" rx="4" opacity=".88"/>
+      <text x="205" y="142" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">SanDisk</text>
+      <text x="674" y="142" text-anchor="start" font-family="Montserrat,sans-serif" font-size="13" font-weight="900" fill="#fff">+156%</text>
+
+      <!-- 3. Micron +141% -->
+      <rect x="215" y="175" width="409" height="34" fill="url(#micronGr)" rx="4" opacity=".9"/>
+      <text x="205" y="197" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">Micron</text>
+      <text x="631" y="197" text-anchor="start" font-family="Montserrat,sans-serif" font-size="13" font-weight="900" fill="#fff">+141%</text>
+
+      <!-- 4. Samsung +114% -->
+      <rect x="215" y="230" width="331" height="34" fill="url(#samsungGr)" rx="4" opacity=".88"/>
+      <text x="205" y="252" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">Samsung</text>
+      <text x="553" y="252" text-anchor="start" font-family="Montserrat,sans-serif" font-size="13" font-weight="900" fill="#fff">+114%</text>
+
+      <!-- Leyenda y nota -->
+      <text x="215" y="310" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.3)">⚠ Riesgo: Google TurboQuant reduce 6× la memoria necesaria para LLMs · Fund managers advierten sobre ciclos históricos boom-bust</text>
+    </svg>
+  </div>
+
+  <!-- Alert box Trump quote -->
+  <div class="alert-box">
+    <div class="alert-icon">💬</div>
+    <div class="alert-body">
+      <strong>Truth Social · Donald Trump:</strong> <em>"Negotiations with the Islamic Republic of Iran are proceeding nicely! It will only be a Great Deal for all or, no Deal at all — Back to the Battlefront and shooting, but bigger and stronger than ever before."</em>
+      <br><br>
+      El mercado reacciona al optimismo retórico, pero el International Crisis Group advierte: Trump "<strong>intenta vender un acuerdo con Irán como una secuela de los Acuerdos de Abraham, cambiando una fantasía por otra</strong>."
+    </div>
+  </div>
+</section>
+
+<!-- ══ TOP 3 NOTICIAS ══ -->
+<section class="news-s">
+  <div class="lbl">Eventos que Mueven el Mercado</div>
+  <div class="ttl">Top 3 Noticias</div>
+  <div class="news-g">
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">01</div>
+        <div class="nc-cat">Geopolítica · Diplomacia</div>
+        <div class="nc-ttl">Irán + Acuerdos de Abraham: Trump Vincula el Cese al Fuego con una Normalización Masiva</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Trump exige que <strong>Arabia Saudita, Qatar, Pakistán, Turquía, Egipto y Jordania</strong> firmen los Acuerdos de Abraham en bloque como condición del acuerdo con Irán. Lindsey Graham apoya el vínculo; el ICG lo llama "cambiar una fantasía por otra".</p><br>
+        <p class="nc-txt"><strong>Pakistán rechazó</strong> la propuesta de inmediato. <span class="stat">Arabia Saudita</span> mantiene su postura: sin hoja de ruta de Estado palestino, no firma. La desconfianza pública en Israel sigue siendo alta en todo el mundo árabe por Gaza.</p><br>
+        <p class="nc-txt">El marco preliminar del acuerdo: única concreción real es <span class="stat">reapertura de Ormuz</span>. Todo lo demás — programa nuclear, misiles balísticos, proxies — queda postergado <strong>sin fecha de inicio</strong>. Israel Hayom: Irán logra su objetivo de supervivencia del régimen; EE.UU. no logra ninguno de sus objetivos.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">02</div>
+        <div class="nc-cat">Seguridad · Medio Oriente</div>
+        <div class="nc-ttl">Netanyahu Escala contra Hezbollah el Mismo Día que Trump Celebra el Avance con Irán</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Netanyahu declaró en video que Israel intensificará los ataques contra Hezbollah: "<strong>Pisen el pedal más fuerte, intensifiquen los golpes, aumenten la potencia de fuego y aplástelos.</strong>" Esto el mismo día que Trump publicó que los acuerdos con Irán "avanzan bien".</p><br>
+        <p class="nc-txt">Netanyahu cita <strong>violaciones del cese al fuego de abril 2026</strong> por drones y cohetes de Hezbollah. Subrayó que Israel actúa <strong>independientemente</strong> en el frente libanés, incluso si avanzan las conversaciones EE.UU.–Irán.</p><br>
+        <p class="nc-txt"><span class="stat">Alerta:</span> Irán advirtió explícitamente a EE.UU. que ataques israelíes escalados sobre Beirut o sus suburbios podrían <strong>descarrilar el acuerdo más amplio</strong>. El teatro libanés se calienta activamente mientras Washington negocia en Teherán.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">03</div>
+        <div class="nc-cat">Tech · IA · Chips</div>
+        <div class="nc-ttl">Superciclo de Chips IA: +186% en 2026 — pero Google TurboQuant Amenaza el Rally</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Empresas con exposición a IA evitan el impacto del conflicto iraní. Rendimientos YTD 2026: <span class="stat-g">SK Hynix +186%</span> <span class="stat-g">SanDisk +156%</span> <span class="stat-g">Micron +141%</span> <span class="stat-g">Samsung +114%</span>. Goldman Sachs reporta que hedge funds compraron tech a la tasa más rápida en ~<strong>3 meses</strong>.</p><br>
+        <p class="nc-txt"><strong>Tesis alcista:</strong> ejecutivos de la industria argumentan que la IA ha eliminado la ciclicidad histórica de la memoria — donde la demanda fluctúa mientras la oferta permanece fija. La demanda de HBM (High Bandwidth Memory) es estructural.</p><br>
+        <p class="nc-txt"><strong>Riesgo bajista:</strong> Google lanzó <span class="stat">TurboQuant</span>, método de compresión que reduce <strong>6× la memoria necesaria</strong> para correr LLMs. Provocó caída aguda en precios de stocks de memoria al publicarse. Producción podría aumentar significativamente en <strong>3 años</strong>, aliviando restricciones de oferta.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EXTENDIDO ══ -->
+<section class="ext-s">
+  <div class="lbl">Más Noticias Relevantes</div>
+  <div class="ttl">Análisis Extendido</div>
+  <div class="ext-g">
+
+    <div class="ec">
+      <div class="ec-cat">🏦 Banco Central · Japón</div>
+      <div class="ec-ttl">BOJ: Inflación al 2.8% Abre la Puerta a Alza de Tasas en Junio</div>
+      <div class="ec-body">
+        El nuevo índice de inflación núcleo del Banco de Japón aceleró a <strong>2.8%</strong> en abril, superando el objetivo del <strong>2%</strong>. Sube desde 2.5% en marzo. El nuevo índice excluye costos de educación y subsidios energéticos, dando una imagen más clara de la inflación subyacente. El IPC benchmark del gobierno registró solo <strong>1.4%</strong>.<br><br>
+        El Vicegobernador <strong>Ryozo Himino</strong> subrayó que las tasas reales siguen muy bajas y continuarán subiendo. Los mercados descuentan <strong>80% de probabilidad de alza en junio</strong>. En los gráficos: el par <strong>USD/JPY</strong> muestra tendencia alcista clara si rompe las resistencias de <strong>159.35–159.50</strong>.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">BOJ</span><span class="etag">Japón</span><span class="etag">USD/JPY</span><span class="etag">Tasas</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">⚠️ Análisis · Israel</div>
+      <div class="ec-ttl">Israel Hayom: El Marco del Acuerdo con Irán Favorece Fuertemente a Teherán</div>
+      <div class="ec-body">
+        Análisis crítico del diario israelí <strong>Israel Hayom</strong>: el único resultado concreto del acuerdo preliminar es la <strong>reapertura mutua del Estrecho de Ormuz</strong> — lo que permite que salgan barcos atrapados y que los petroleros iraníes reanuden exportaciones.<br><br>
+        Cada tema crítico para Israel —programa nuclear de Irán, desarrollo de misiles balísticos, apoyo a milicias proxy— queda <strong>postergado a negociaciones futuras sin fecha de inicio</strong>. El análisis concluye: Irán logra su objetivo de <strong>supervivencia del régimen</strong> mientras EE.UU. no logra ninguno de sus objetivos de guerra declarados. Para Israel, todas las cuestiones vitales para su seguridad quedan en un <strong>futuro incierto sin garantías</strong>.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Irán</span><span class="etag">Israel</span><span class="etag">Nuclear</span><span class="etag">Acuerdo</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">💹 Flujos · Institucional</div>
+      <div class="ec-ttl">Goldman Sachs: Hedge Funds Compran Tech al Mayor Ritmo en 3 Meses</div>
+      <div class="ec-body">
+        Un reporte de <strong>Goldman Sachs</strong> a clientes del viernes reveló que los hedge funds favorizaron acciones tecnológicas la semana pasada, comprándolas a la <strong>tasa más rápida en aproximadamente 3 meses</strong>.<br><br>
+        Los negocios con exposición potencial a avances en IA —especialmente en semiconductores y chips— han logrado esquivar el impacto económico negativo del conflicto iraní en la economía global. Sin embargo, gestores de fondos advierten que el boom en stocks de chips de memoria podría aún estar sujeto a los <strong>históricos ciclos boom-bust</strong> de la industria, a pesar de los argumentos de que la IA ha cambiado la dinámica de forma permanente.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Goldman Sachs</span><span class="etag">Hedge Funds</span><span class="etag">Tech</span><span class="etag">IA</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🛢️ Macro · Energía</div>
+      <div class="ec-ttl">Petróleo Cae Bajo $100 pero Rebota; Trump Advierte Zona Roja Energética este Verano</div>
+      <div class="ec-body">
+        El Brent spot cayó por debajo del umbral de <strong>$100/barril</strong> impulsado por el optimismo en el acuerdo con Irán, encontrando soporte en <strong>$93.25</strong>. Desde allí ha rebotado a <strong>$95.80</strong> en las últimas horas. Los ataques militares de EE.UU. en el sur de Irán, caracterizados como "medidas defensivas", también empujaron los precios al alza el martes.<br><br>
+        Según Trump, la batalla continúa y Washington no aceptará presiones para cerrar un acuerdo en un momento en que los suministros energéticos están en peligro de entrar en la <strong>"zona roja" este verano</strong>, y las aspiraciones de <strong>IA del Golfo</strong> están comprometidas. El Euro Stoxx 50 cerró en <strong>6,125</strong> puntos tras superar brevemente los 6,150.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Petróleo</span><span class="etag">Irán</span><span class="etag">Energía</span><span class="etag">Zona Roja</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo">ATFX</div>
+  <div class="f-sub">MARKET INTELLIGENCE · WEEKLY REPORT · MAYO 2026</div>
+  <div class="f-div"></div>
+  <div class="f-disc">
+    <strong>AVISO DE RIESGO:</strong> La negociación de divisas (Forex) y contratos por diferencia (CFDs) en productos como índices, materias primas, acciones y criptomonedas conlleva un alto nivel de riesgo y puede no ser adecuada para todos los inversores. El valor de su inversión puede tanto aumentar como disminuir, y podría recibir menos de lo que invirtió originalmente. Antes de operar, asegúrese de comprender completamente los riesgos involucrados y, si es necesario, busque asesoramiento financiero independiente. Los CFDs son instrumentos complejos que conllevan un alto riesgo de perder dinero rápidamente debido al apalancamiento.
+    <br><br>
+    <strong>AVISO LEGAL:</strong> Este informe ha sido preparado únicamente con fines informativos y no constituye asesoramiento de inversión, recomendación ni oferta o solicitud de compra o venta de ningún instrumento financiero. La información contenida se ha obtenido de fuentes consideradas fiables, pero ATFX no garantiza su exactitud, integridad ni actualidad. Las opiniones son de los analistas en la fecha de publicación y están sujetas a cambios sin previo aviso. El rendimiento pasado no es indicativo de resultados futuros.
+    <br><br>
+    © 2026 ATFX. Todos los derechos reservados. ATFX es un nombre comercial de AT Global Markets (UK) Ltd, autorizado y regulado por la Financial Conduct Authority (FCA) del Reino Unido.
+  </div>
+</footer>
+
+</div>
