@@ -1,0 +1,211 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:#0D1B2A;color:#fff;min-height:100vh;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 52px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-size:22px;font-weight:900;letter-spacing:5px;color:#fff;display:flex;align-items:center;gap:0;text-decoration:none;}
+.nav-a{position:relative;display:inline-block;}
+.nav-a::after{content:'';position:absolute;bottom:33%;left:-2px;right:-2px;height:3px;background:#E8572A;border-radius:2px;}
+.nav-right{display:flex;align-items:center;gap:24px;}
+.nav-link{font-size:11px;font-weight:600;letter-spacing:2px;color:#5A7A95;text-decoration:none;text-transform:uppercase;transition:color .2s;}
+.nav-link:hover{color:#E8572A;}
+.nav-gh{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:1px;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:7px 14px;text-decoration:none;transition:background .2s;}
+.nav-gh:hover{background:rgba(255,255,255,.12);}
+.nav-gh svg{opacity:.7;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 52px 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 30%,rgba(232,87,42,.09) 0%,transparent 55%),radial-gradient(ellipse at 20% 80%,rgba(27,58,98,.5) 0%,transparent 50%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);}
+.hero-content{position:relative;z-index:1;max-width:780px;}
+.hero-eyebrow{font-size:10px;font-weight:700;letter-spacing:5px;color:#E8572A;text-transform:uppercase;margin-bottom:24px;}
+.hero-logo{font-size:72px;font-weight:900;letter-spacing:10px;color:#fff;display:inline-flex;align-items:center;margin-bottom:6px;line-height:1;}
+.hero-a{position:relative;display:inline-block;}
+.hero-a::after{content:'';position:absolute;bottom:35%;left:-4px;right:-4px;height:6px;background:#E8572A;border-radius:3px;}
+.hero-subtitle{font-size:13px;font-weight:600;letter-spacing:6px;color:#3A5870;text-transform:uppercase;margin-bottom:32px;}
+.hero-divider{width:50px;height:3px;background:#E8572A;border-radius:2px;margin:0 auto 32px;}
+.hero-desc{font-size:16px;font-weight:400;line-height:1.75;color:#8AAABB;max-width:580px;margin:0 auto 48px;}
+.hero-desc strong{color:#C8D8E8;font-weight:600;}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:#E8572A;color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;border-radius:8px;text-decoration:none;transition:background .2s,transform .2s;}
+.hero-cta:hover{background:#D04820;transform:translateY(-1px);}
+.hero-cta svg{transition:transform .2s;}
+.hero-cta:hover svg{transform:translateX(3px);}
+
+/* ── STATS ── */
+.stats{display:flex;justify-content:center;gap:0;margin-top:64px;position:relative;z-index:1;}
+.stat-item{display:flex;flex-direction:column;align-items:center;padding:0 40px;border-right:1px solid rgba(255,255,255,.08);}
+.stat-item:last-child{border-right:none;}
+.stat-val{font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;}
+.stat-val span{color:#E8572A;}
+.stat-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#3A5870;text-transform:uppercase;margin-top:4px;}
+
+/* ── REPORTS ── */
+.reports{background:#111E2E;padding:80px 52px;border-top:1px solid rgba(255,255,255,.05);}
+.reports-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;}
+.reports-lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:#E8572A;text-transform:uppercase;margin-bottom:6px;}
+.reports-ttl{font-size:26px;font-weight:800;color:#fff;}
+.reports-count{font-size:11px;font-weight:600;color:#3A5870;letter-spacing:1px;}
+.reports-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.rc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;}
+.rc:hover{border-color:rgba(232,87,42,.3);transform:translateY(-3px);}
+.rc-top{padding:24px 24px 0;border-top:2px solid #E8572A;}
+.rc-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.rc-issue{font-size:9px;font-weight:700;letter-spacing:2px;color:#E8572A;background:rgba(232,87,42,.1);border:1px solid rgba(232,87,42,.2);border-radius:4px;padding:2px 8px;}
+.rc-date{font-size:10px;color:#3A5870;font-weight:500;letter-spacing:1px;}
+.rc-ttl{font-size:15px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:16px;}
+.rc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.rc-tag{font-size:9px;font-weight:600;color:#4A6A7A;background:rgba(255,255,255,.05);border-radius:4px;padding:2px 8px;letter-spacing:.5px;}
+.rc-footer{border-top:1px solid rgba(255,255,255,.06);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;margin-top:auto;}
+.rc-link{font-size:11px;font-weight:700;letter-spacing:1.5px;color:#E8572A;text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:6px;transition:gap .2s;}
+.rc-link:hover{gap:10px;}
+.rc-status{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:600;color:#2ECC71;letter-spacing:1px;}
+.rc-status::before{content:'';width:6px;height:6px;background:#2ECC71;border-radius:50%;display:inline-block;}
+
+/* ── ABOUT ── */
+.about{background:#0D1B2A;padding:80px 52px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border-top:1px solid rgba(255,255,255,.05);}
+.about-lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.about-ttl{font-size:26px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:20px;}
+.about-body{font-size:13px;color:#5A7A90;line-height:1.75;}
+.about-body strong{color:#8AAABB;}
+.about-features{display:flex;flex-direction:column;gap:14px;}
+.feat{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px 20px;}
+.feat-icon{font-size:20px;flex-shrink:0;}
+.feat-body{}
+.feat-ttl{font-size:12px;font-weight:700;color:#C8D8E8;margin-bottom:3px;}
+.feat-sub{font-size:11px;color:#4A6A80;line-height:1.4;}
+
+/* ── FOOTER ── */
+footer{background:#080F18;padding:40px 52px;border-top:2px solid rgba(232,87,42,.18);}
+.foot-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;}
+.foot-logo{font-size:20px;font-weight:900;letter-spacing:5px;color:#fff;margin-bottom:4px;}
+.foot-sub{font-size:9px;font-weight:700;letter-spacing:2px;color:#E8572A;}
+.foot-links{display:flex;gap:24px;}
+.foot-link{font-size:10px;font-weight:600;letter-spacing:1px;color:#3A5060;text-decoration:none;text-transform:uppercase;transition:color .2s;}
+.foot-link:hover{color:#8AAABB;}
+.foot-div{height:1px;background:rgba(255,255,255,.05);margin-bottom:20px;}
+.foot-disc{font-size:10px;color:#1E3040;line-height:1.8;}
+.foot-disc strong{color:#2A4050;}
+
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-right .nav-link{display:none;}
+  .hero{padding:100px 24px 60px;}
+  .hero-logo{font-size:52px;}
+  .stats{flex-wrap:wrap;gap:20px;}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:0 0 20px;width:45%;}
+  .stat-item:nth-child(odd){border-right:1px solid rgba(255,255,255,.08);}
+  .reports{padding:60px 20px;}
+  .reports-g{grid-template-columns:1fr;}
+  .about{grid-template-columns:1fr;padding:60px 20px;gap:40px;}
+  footer{padding:32px 20px;}
+  .foot-top{flex-direction:column;gap:20px;}
+}
+</style>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span class="nav-a">A</span>TFX</a>
+  <div class="nav-right">
+    <a class="nav-link" href="#informes">Informes</a>
+    <a class="nav-link" href="#acerca">Acerca de</a>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Market Intelligence Reports</div>
+    <div class="hero-logo"><span class="hero-a">A</span>TFX</div>
+    <div class="hero-subtitle">Informe de Mercado · Repositorio</div>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Un broker global de <strong>Forex y CFD</strong> confiable que atiende a más de <strong>500,000 clientes</strong> en todo el mundo ofreciendo trading en <strong>FX, materias primas, índices</strong> y más.
+    </p>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-val">500<span>K+</span></div>
+        <div class="stat-lbl">Clientes Globales</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val"><span>#</span>1</div>
+        <div class="stat-lbl">Broker Regulado FCA</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">100<span>+</span></div>
+        <div class="stat-lbl">Instrumentos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">24<span>/5</span></div>
+        <div class="stat-lbl">Análisis de Mercado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="acerca">
+  <div>
+    <div class="about-lbl">Acerca de este Repositorio</div>
+    <div class="about-ttl">Análisis de mercado diario para traders profesionales</div>
+    <p class="about-body">
+      Este repositorio centraliza los <strong>informes diarios y semanales de mercado</strong> de ATFX, diseñados para ofrecer una lectura rápida, visual y precisa de los movimientos globales. Cada informe extrae cifras exactas de fuentes primarias y las presenta en un formato optimizado para la toma de decisiones.
+    </p>
+  </div>
+  <div class="about-features">
+    <div class="feat">
+      <div class="feat-icon">📊</div>
+      <div class="feat-body">
+        <div class="feat-ttl">Market Snapshot</div>
+        <div class="feat-sub">Indicadores clave con variaciones exactas de sesión en formato escaneable</div>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🌐</div>
+      <div class="feat-body">
+        <div class="feat-ttl">Análisis Macro</div>
+        <div class="feat-sub">Tres vectores geopolíticos, monetarios y corporativos que mueven los mercados</div>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📈</div>
+      <div class="feat-body">
+        <div class="feat-ttl">Gráficos SVG Interactivos</div>
+        <div class="feat-sub">Visualizaciones de rendimiento construidas con datos exactos del informe fuente</div>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🗞️</div>
+      <div class="feat-body">
+        <div class="feat-ttl">Top Noticias + Análisis Extendido</div>
+        <div class="feat-sub">Cobertura completa del 100% del contenido del informe original</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-logo">ATFX</div>
+      <div class="foot-sub">MARKET INTELLIGENCE REPORTS · 2026</div>
+    </div>
+    <div class="foot-links">
+      <a class="foot-link" href="#informes">Informes</a>
+      <a class="foot-link" href="https://www.atfx.com" target="_blank">ATFX.com</a>
+      <a class="foot-link" href="https://github.com" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="foot-div"></div>
+  <div class="foot-disc">
+    <strong>AVISO DE RIESGO:</strong> La negociación de divisas (Forex) y CFDs conlleva un alto nivel de riesgo y puede no ser adecuada para todos los inversores. El valor de su inversión puede tanto aumentar como disminuir. Los CFDs son instrumentos complejos con alto riesgo de perder dinero rápidamente debido al apalancamiento. Asegúrese de comprender los riesgos antes de operar.
+    <br><br>
+    <strong>AVISO LEGAL:</strong> Los informes contenidos en este repositorio han sido preparados únicamente con fines informativos y no constituyen asesoramiento de inversión. © 2026 ATFX — AT Global Markets (UK) Ltd, autorizado y regulado por la FCA del Reino Unido.
+  </div>
+</footer>
