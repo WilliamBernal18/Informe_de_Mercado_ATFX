@@ -1,0 +1,479 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#0D1B2A;color:#fff;}
+.nl{max-width:920px;margin:0 auto;background:#0D1B2A;}
+
+.cover{background:linear-gradient(145deg,#1B3A62 0%,#0D1B2A 50%,#152A44 100%);padding:64px 52px 52px;text-align:center;position:relative;overflow:hidden;border-bottom:3px solid #E8572A;}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 20%,rgba(232,87,42,.11) 0%,transparent 55%);pointer-events:none;}
+.atfx-logo{font-size:60px;font-weight:900;letter-spacing:8px;color:#fff;display:inline-flex;align-items:center;}
+.a-let{position:relative;display:inline-block;}
+.a-let::after{content:'';position:absolute;bottom:35%;left:-3px;right:-3px;height:5px;background:#E8572A;border-radius:2px;}
+.badge{font-size:10px;font-weight:700;letter-spacing:2px;color:#E8572A;background:rgba(232,87,42,.13);border:1px solid rgba(232,87,42,.35);border-radius:6px;padding:4px 13px;margin-left:20px;vertical-align:middle;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:5px;color:#4A6A85;text-transform:uppercase;margin:22px 0 0;}
+.divider{width:50px;height:3px;background:#E8572A;margin:18px auto;border-radius:2px;}
+.cover-h1{font-size:34px;font-weight:900;line-height:1.15;color:#fff;max-width:720px;margin:0 auto 16px;}
+.cover-h1 em{color:#E8572A;font-style:normal;}
+.cover-date{font-size:11px;font-weight:500;letter-spacing:2px;color:#4A6A85;text-transform:uppercase;margin-bottom:26px;}
+.tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+.tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:10px;color:#5A7A95;font-weight:500;letter-spacing:1px;}
+
+section{padding:48px 52px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:#E8572A;text-transform:uppercase;margin-bottom:6px;}
+.ttl{font-size:22px;font-weight:800;color:#fff;margin-bottom:28px;}
+
+.snap-s{background:#111E2E;border-bottom:1px solid rgba(255,255,255,.05);}
+.snap-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.sc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 15px;}
+.sc.up{border-top:3px solid #2ECC71;}.sc.dn{border-top:3px solid #E74C3C;}.sc.ht{border-top:3px solid #E8572A;}.sc.nt{border-top:3px solid #5A8AA5;}
+.sc-lbl{font-size:9px;font-weight:700;letter-spacing:2px;color:#3A5870;text-transform:uppercase;margin-bottom:8px;}
+.sc-val{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.sc-chg{font-size:11px;font-weight:700;margin-bottom:3px;}
+.sc-chg.up{color:#2ECC71;}.sc-chg.dn{color:#E74C3C;}.sc-chg.ht{color:#E8572A;}.sc-chg.nt{color:#5A8AA5;}
+.sc-note{font-size:10px;color:#3A5870;line-height:1.4;}
+
+.macro-s{background:#0D1B2A;}
+.macro-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.mb{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 22px;position:relative;overflow:hidden;}
+.mb::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#E8572A,transparent);}
+.mb-icon{font-size:26px;display:block;margin-bottom:12px;}
+.mb-ttl{font-size:10px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:16px;}
+.mb ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.mb li{font-size:11.5px;color:#7A9AB0;padding-left:14px;position:relative;line-height:1.5;}
+.mb li::before{content:'▸';position:absolute;left:0;color:#E8572A;font-size:9px;top:3px;}
+.mb li strong{color:#C8D8E8;font-weight:700;}
+
+.chart-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);}
+.chart-wrap{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px;}
+
+.mini-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:20px 22px;}
+.mini-ttl{font-size:10px;font-weight:700;letter-spacing:2px;color:#E8572A;text-transform:uppercase;margin-bottom:14px;}
+.h-row{margin-bottom:12px;}
+.h-lbl{display:flex;justify-content:space-between;font-size:11px;color:#4A6A80;margin-bottom:5px;}
+.h-lbl strong{font-weight:700;}
+.h-track{background:rgba(255,255,255,.06);border-radius:4px;height:9px;overflow:hidden;}
+.h-fill{height:100%;border-radius:4px;}
+.mini-note{font-size:11px;color:#4A6A80;line-height:1.6;margin-top:10px;}
+.mini-note strong{color:#8AABB8;}
+
+.cal-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.cal-item:last-child{border-bottom:none;}
+.cal-day{background:rgba(232,87,42,.12);border:1px solid rgba(232,87,42,.25);border-radius:6px;padding:4px 10px;font-size:9px;font-weight:700;color:#E8572A;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;margin-top:2px;}
+.cal-body{font-size:11.5px;color:#7A9AB0;line-height:1.5;}
+.cal-body strong{color:#C8D8E8;}
+
+.news-s{background:#0D1B2A;}
+.news-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.nc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;}
+.nc-head{background:linear-gradient(135deg,#1B3A62,#0E1F32);padding:22px;border-bottom:2px solid #E8572A;}
+.nc-num{font-size:42px;font-weight:900;color:rgba(232,87,42,.2);line-height:1;margin-bottom:8px;}
+.nc-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.nc-ttl{font-size:14px;font-weight:700;color:#fff;line-height:1.3;}
+.nc-body{padding:20px 22px;}
+.nc-txt{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.nc-txt strong{color:#B0C8D8;}
+.stat{display:inline-block;background:rgba(232,87,42,.1);border:1px solid rgba(232,87,42,.22);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#E8572A;margin:2px 1px;}
+.stat-g{display:inline-block;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.2);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#2ECC71;margin:2px 1px;}
+.stat-b{display:inline-block;background:rgba(90,138,165,.1);border:1px solid rgba(90,138,165,.25);border-radius:4px;padding:1px 7px;font-size:10.5px;font-weight:700;color:#5A8AA5;margin:2px 1px;}
+
+.ext-s{background:#111E2E;border-top:1px solid rgba(255,255,255,.05);}
+.ext-g{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.ec{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:24px;}
+.ec-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;color:#E8572A;text-transform:uppercase;margin-bottom:8px;}
+.ec-ttl{font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3;}
+.ec-body{font-size:11.5px;color:#5A7A90;line-height:1.65;}
+.ec-body strong{color:#9AAABB;}
+.etag{display:inline-block;background:rgba(255,255,255,.05);border-radius:4px;padding:2px 8px;font-size:9.5px;color:#4A6A7A;margin:5px 3px 0 0;}
+
+footer{background:#080F18;padding:40px 52px;border-top:2px solid rgba(232,87,42,.2);}
+.f-logo{font-size:22px;font-weight:900;letter-spacing:5px;color:#fff;margin-bottom:4px;}
+.f-sub{font-size:9px;font-weight:700;letter-spacing:2px;color:#E8572A;margin-bottom:18px;}
+.f-div{height:1px;background:rgba(255,255,255,.05);margin:18px 0;}
+.f-disc{font-size:10px;color:#2A3D4D;line-height:1.8;}
+.f-disc strong{color:#3A5060;}
+
+@media(max-width:720px){
+  section{padding:32px 20px;}
+  .cover{padding:40px 20px 36px;}
+  .snap-g{grid-template-columns:1fr 1fr;}
+  .macro-g,.news-g,.ext-g,.chart-grid{grid-template-columns:1fr;}
+  .cover-h1{font-size:24px;}
+  .atfx-logo{font-size:42px;}
+}
+</style>
+
+<div class="nl">
+
+<!-- ══ PORTADA ══ -->
+<header class="cover">
+  <div><div class="atfx-logo"><span class="a-let">A</span>TFX<span class="badge">MARKET REPORT</span></div></div>
+  <div class="eyebrow">Informe Semanal · Junio 2, 2026</div>
+  <div class="divider"></div>
+  <h1 class="cover-h1">Máximos históricos pese a los misiles:<br><em>el mercado apuesta por la tregua</em></h1>
+  <div class="cover-date">Lunes, 2 de Junio de 2026 &nbsp;·&nbsp; ATFX Market Intelligence</div>
+  <div class="tags">
+    <span class="tag">S&amp;P 7,615 ATH</span>
+    <span class="tag">MISIL IRÁN · KUWAIT</span>
+    <span class="tag">ORMUZ 8 BUQUES</span>
+    <span class="tag">BOJ · TASAS</span>
+    <span class="tag">PMI ASIA</span>
+    <span class="tag">PALANTIR PRISMA</span>
+    <span class="tag">STABLECOINS $320B</span>
+  </div>
+</header>
+
+<!-- ══ MARKET SNAPSHOT ══ -->
+<section class="snap-s">
+  <div class="lbl">Mercados en Cifras</div>
+  <div class="ttl">Market Snapshot</div>
+  <div class="snap-g">
+    <div class="sc up">
+      <div class="sc-lbl">S&amp;P 500 E-Mini Fut.</div>
+      <div class="sc-val">7,615</div>
+      <div class="sc-chg up">▲ Supera los 7,600 · ATH</div>
+      <div class="sc-note">Optimismo por tregua con Irán</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">NASDAQ 100 Fut.</div>
+      <div class="sc-val">30,570</div>
+      <div class="sc-chg up">▲ Supera los 30,500 · ATH</div>
+      <div class="sc-note">Rally continúa impulsado por IA / chips</div>
+    </div>
+    <div class="sc nt">
+      <div class="sc-lbl">DXY · Índice Dólar</div>
+      <div class="sc-val">~99.00</div>
+      <div class="sc-chg nt">↗ Recupera nivel 99</div>
+      <div class="sc-note">EUR/USD ~1.1650 · GBP/USD ~1.3465</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">EUR/USD</div>
+      <div class="sc-val">1.1650</div>
+      <div class="sc-chg dn">▼ Bajo presión del USD</div>
+      <div class="sc-note">GBP/USD: 1.3465</div>
+    </div>
+    <div class="sc up">
+      <div class="sc-lbl">BRENT Spot · Petróleo</div>
+      <div class="sc-val">$93.75</div>
+      <div class="sc-chg up">▲ +2.5% desde zona $90</div>
+      <div class="sc-note">Nuevo fuego cruzado EE.UU.–Irán fin de sem.</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">XAU · Oro Futuros</div>
+      <div class="sc-val">$4,540</div>
+      <div class="sc-chg dn">▼ Retrocede desde $4,625</div>
+      <div class="sc-note">Máximo del viernes: $4,625/oz</div>
+    </div>
+    <div class="sc dn">
+      <div class="sc-lbl">BTC/USD · Bitcoin</div>
+      <div class="sc-val">~$73,000</div>
+      <div class="sc-chg dn">▼ Cae en las últimas horas</div>
+      <div class="sc-note">Movimiento hacia zona de $73,000</div>
+    </div>
+    <div class="sc nt">
+      <div class="sc-lbl">DAX 40 Futuros</div>
+      <div class="sc-val">25,140</div>
+      <div class="sc-chg nt">→ Apertura modesta en Europa</div>
+      <div class="sc-note">Euro Stoxx 50: 6,050</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MACRO ══ -->
+<section class="macro-s">
+  <div class="lbl">Análisis de Fondo</div>
+  <div class="ttl">Tres Vectores que Mueven el Mercado</div>
+  <div class="macro-g">
+
+    <div class="mb">
+      <span class="mb-icon">🌐</span>
+      <div class="mb-ttl">Geopolítica · Irán</div>
+      <ul>
+        <li>Conflicto Oriente Medio en <strong>equilibrio</strong> — mercados lo interpretan como satisfactorio</li>
+        <li>Irán lanzó misil <strong>Fateh-110</strong> contra base Ali Al Salem en Kuwait → ~5 heridos leves, <strong>2 MQ-9 Reapers destruidos</strong> (~$30M c/u)</li>
+        <li>EE.UU. respondió: ataques a radar iraní y drones en <strong>Isla Qeshm y Goruk</strong></li>
+        <li>Ormuz: solo <strong>8 buques el 30 de mayo</strong>, 2 petroleros (vs. media de <strong>136/día</strong> pre-guerra)</li>
+        <li>Reservas mundiales de petróleo podrían agotarse para <strong>mediados de junio</strong></li>
+        <li>Trump evalúa prorrogar la tregua de abril otros <strong>60 días</strong></li>
+        <li>Hegseth (Shangri-La, 30 mayo): EE.UU. está <strong>listo para reanudar ataques</strong> si no hay acuerdo</li>
+        <li>Reunión Sala de Situación el 29 mayo: terminó <strong>sin anuncio</strong> — señales mixtas</li>
+      </ul>
+    </div>
+
+    <div class="mb">
+      <span class="mb-icon">📅</span>
+      <div class="mb-ttl">Eventos de Riesgo · Semana</div>
+      <ul>
+        <li><strong>Lunes:</strong> ISM Manufacturing PMI EE.UU.</li>
+        <li><strong>Martes:</strong> IPC preliminar de la Eurozona (lectura mensual)</li>
+        <li><strong>Miércoles:</strong> ISM Services PMI EE.UU.</li>
+        <li><strong>Viernes:</strong> <strong>Nóminas No Agrícolas (NFP) + Tasa de Desempleo EE.UU.</strong> — el evento principal de la semana</li>
+        <li>BCE alerta sobre stablecoins dolarizadas → cap. total stablecoins: <strong>$320,000M</strong></li>
+        <li>USDT + USDC dominan; stablecoins en euros: apenas <strong>~€500M</strong></li>
+        <li>Schnabel (BCE): euro digital como respuesta a la <strong>dolarización tecnológica</strong></li>
+      </ul>
+    </div>
+
+    <div class="mb">
+      <span class="mb-icon">🏭</span>
+      <div class="mb-ttl">PMI Asia-Pacífico · Mayo</div>
+      <ul>
+        <li>India: PMI <strong>55.0</strong> — ritmo más rápido en <strong>tres meses</strong></li>
+        <li>Corea del Sur: PMI <strong>54.8</strong> — ritmo más rápido en <strong>cinco años</strong></li>
+        <li>Japón: PMI <strong>54.5</strong> — se ralentiza desde máximo plurianual de abril</li>
+        <li>China: PMI <strong>51.8</strong> — expansión por <strong>sexto mes consecutivo</strong></li>
+        <li>Exportaciones de Corea: crecimiento anual más fuerte en <strong>más de cuatro décadas</strong>, respaldado por ventas récord de chips</li>
+        <li>Empresas acumulan existencias como <strong>amortiguador</strong> ante choques de suministro</li>
+        <li>Pedidos de exportación de China se <strong>contrajeron por primera vez</strong> en cinco meses</li>
+        <li>Costos de insumos japoneses: mayor aumento desde <strong>septiembre 2022</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ GRÁFICO ══ -->
+<section class="chart-s">
+  <div class="lbl">Análisis Visual</div>
+  <div class="ttl">PMI Manufacturero Asia-Pacífico — Mayo 2026</div>
+  <div class="chart-wrap">
+    <svg viewBox="0 0 820 310" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+      <defs>
+        <linearGradient id="indGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#E8572A"/><stop offset="100%" stop-color="#F08050"/>
+        </linearGradient>
+        <linearGradient id="korGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2ECC71"/><stop offset="100%" stop-color="#52D98A"/>
+        </linearGradient>
+        <linearGradient id="jpnGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1B3A62"/><stop offset="100%" stop-color="#2E6090"/>
+        </linearGradient>
+        <linearGradient id="chnGr" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1A5276"/><stop offset="100%" stop-color="#2874A6"/>
+        </linearGradient>
+      </defs>
+      <rect width="820" height="310" fill="#07121E"/>
+
+      <!-- Título -->
+      <text x="410" y="28" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.85)">PMI MANUFACTURERO ASIA-PACÍFICO — MAYO 2026</text>
+      <text x="410" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">Valores por encima de 50 indican expansión  ·  Empresas acumulan inventarios por guerra en Oriente Medio  ·  Fuente: ATFX Market Report</text>
+
+      <!-- Cuadrícula vertical -->
+      <!-- Escala: umbral 50 en x=215; rango 50-57 = 7pts en 600px → 1pt=85.7px -->
+      <!-- x: 50=215, 51=301, 52=386, 53=472, 54=557, 55=643, 56=729, 57=814 -->
+      <line x1="215" y1="58" x2="215" y2="258" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+      <line x1="301" y1="58" x2="301" y2="258" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="386" y1="58" x2="386" y2="258" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="472" y1="58" x2="472" y2="258" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="557" y1="58" x2="557" y2="258" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="643" y1="58" x2="643" y2="258" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <line x1="729" y1="58" x2="729" y2="258" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+
+      <!-- Etiquetas eje X -->
+      <text x="215" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.5)">50</text>
+      <text x="301" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">51</text>
+      <text x="386" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">52</text>
+      <text x="472" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">53</text>
+      <text x="557" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">54</text>
+      <text x="643" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">55</text>
+      <text x="729" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.3)">56</text>
+
+      <!-- Etiqueta umbral -->
+      <text x="218" y="54" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.35)">UMBRAL EXPANSIÓN</text>
+
+      <!-- ─ BARRAS HORIZONTALES ─ -->
+      <!-- Bar heights=38, gaps=16 | 1pt=85.7px | start x=215 -->
+      <!-- India 55.0: width=(55-50)*85.7=428.5→429 | y=65 | end x=644 -->
+      <!-- Corea 54.8: width=(54.8-50)*85.7=411.4→411 | y=119 | end x=626 -->
+      <!-- Japón 54.5: width=(54.5-50)*85.7=385.7→386 | y=173 | end x=601 -->
+      <!-- China 51.8: width=(51.8-50)*85.7=154.3→154 | y=227 | end x=369 -->
+
+      <!-- 1. India PMI 55.0 -->
+      <rect x="215" y="65" width="429" height="38" fill="url(#indGr)" rx="4" opacity=".92"/>
+      <rect x="215" y="65" width="429" height="38" fill="none" stroke="rgba(232,87,42,.3)" stroke-width="1" rx="4"/>
+      <text x="205" y="89" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">🇮🇳 India</text>
+      <text x="651" y="89" text-anchor="start" font-family="Montserrat,sans-serif" font-size="14" font-weight="900" fill="#fff">55.0</text>
+      <text x="700" y="89" text-anchor="start" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.4)">Máx. 3 meses</text>
+
+      <!-- 2. Corea del Sur PMI 54.8 -->
+      <rect x="215" y="119" width="411" height="38" fill="url(#korGr)" rx="4" opacity=".9"/>
+      <text x="205" y="143" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">🇰🇷 Corea</text>
+      <text x="633" y="143" text-anchor="start" font-family="Montserrat,sans-serif" font-size="14" font-weight="900" fill="#fff">54.8</text>
+      <text x="682" y="143" text-anchor="start" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(46,204,113,.7)">★ Máx. 5 años</text>
+
+      <!-- 3. Japón PMI 54.5 -->
+      <rect x="215" y="173" width="386" height="38" fill="url(#jpnGr)" rx="4" opacity=".9"/>
+      <text x="205" y="197" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">🇯🇵 Japón</text>
+      <text x="608" y="197" text-anchor="start" font-family="Montserrat,sans-serif" font-size="14" font-weight="900" fill="#fff">54.5</text>
+      <text x="657" y="197" text-anchor="start" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.35)">Desde máx. plurianual de abril</text>
+
+      <!-- 4. China PMI 51.8 -->
+      <rect x="215" y="227" width="154" height="38" fill="url(#chnGr)" rx="4" opacity=".88"/>
+      <text x="205" y="251" text-anchor="end" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.8)">🇨🇳 China</text>
+      <text x="376" y="251" text-anchor="start" font-family="Montserrat,sans-serif" font-size="14" font-weight="900" fill="#fff">51.8</text>
+      <text x="425" y="251" text-anchor="start" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,.35)">6° mes consecutivo en expansión</text>
+
+      <!-- Nota inferior -->
+      <text x="215" y="296" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.28)">⚠ China: pedidos de exportación se contrajeron por 1ª vez en 5 meses · Exportaciones de Corea: mayor crecimiento anual en +40 años</text>
+    </svg>
+  </div>
+
+  <!-- Grid de mini-cards -->
+  <div class="chart-grid">
+
+    <!-- Hormuz actualizado -->
+    <div class="mini-card">
+      <div class="mini-ttl">⚓ Estrecho de Ormuz — 30 de Mayo</div>
+      <div class="h-row">
+        <div class="h-lbl">
+          <span>Buques el 30 de mayo (solo 2 petroleros)</span>
+          <strong style="color:#E8572A;">8 buques</strong>
+        </div>
+        <div class="h-track"><div class="h-fill" style="width:5.9%;background:#E8572A;"></div></div>
+      </div>
+      <div class="h-row">
+        <div class="h-lbl">
+          <span>Media diaria pre-guerra (referencia)</span>
+          <strong style="color:#2ECC71;">~136 buques/día</strong>
+        </div>
+        <div class="h-track"><div class="h-fill" style="width:100%;background:rgba(46,204,113,.38);"></div></div>
+      </div>
+      <div class="mini-note">Reservas mundiales de petróleo podrían agotarse para <strong>mediados de junio</strong>. Brent: +2.5% a $93.40, aún muy por debajo de $100.</div>
+    </div>
+
+    <!-- Calendario de riesgo -->
+    <div class="mini-card">
+      <div class="mini-ttl">📅 Calendario de Riesgo · Semana 2–6 Junio</div>
+      <div class="cal-item">
+        <span class="cal-day">Lun</span>
+        <div class="cal-body"><strong>ISM Manufacturing PMI</strong> — EE.UU.</div>
+      </div>
+      <div class="cal-item">
+        <span class="cal-day">Mar</span>
+        <div class="cal-body"><strong>IPC Preliminar Eurozona</strong> — lectura mensual</div>
+      </div>
+      <div class="cal-item">
+        <span class="cal-day">Mié</span>
+        <div class="cal-body"><strong>ISM Services PMI</strong> — EE.UU.</div>
+      </div>
+      <div class="cal-item">
+        <span class="cal-day" style="background:rgba(232,87,42,.25);border-color:rgba(232,87,42,.5);">Vie ⭐</span>
+        <div class="cal-body"><strong>NFP + Tasa de Desempleo EE.UU.</strong> — Evento principal de la semana</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TOP 3 NOTICIAS ══ -->
+<section class="news-s">
+  <div class="lbl">Eventos que Mueven el Mercado</div>
+  <div class="ttl">Top 3 Noticias</div>
+  <div class="news-g">
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">01</div>
+        <div class="nc-cat">Seguridad · Irán · Kuwait</div>
+        <div class="nc-ttl">Irán Lanza Misil Fateh-110 contra Base de EE.UU. en Kuwait: ~5 Heridos, 2 MQ-9 Destruidos</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Irán lanzó un misil balístico de corto alcance <strong>Fateh-110</strong> contra la base aérea <strong>Ali Al Salem</strong> en Kuwait. Las defensas aéreas kuwaitíes lo interceptaron, pero los escombros impactaron la base, causando heridas leves a <span class="stat">~5 estadounidenses</span> (personal militar y contratistas civiles). Sin muertes reportadas.</p><br>
+        <p class="nc-txt">Los escombros también dañaron gravemente o destruyeron <strong>2 drones MQ-9 Reaper</strong> valorados en <span class="stat">~$30M c/u</span>. Funcionarios de EE.UU. calificaron el lanzamiento como "<strong>flagrante violación del alto el fuego</strong>". Irán lo presentó como represalia proporcionada. Los detalles surgieron de fuente anónima; ni DoD, ni CENTCOM ni Kuwait emitieron declaraciones.</p><br>
+        <p class="nc-txt">El ataque ocurrió mientras se discutía el marco tentativo para una <strong>extensión del cese al fuego de 60 días</strong>. La reunión en la Sala de Situación de la Casa Blanca del 29 mayo terminó <strong>sin anuncio</strong>.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">02</div>
+        <div class="nc-cat">Manufactura · Asia-Pacífico</div>
+        <div class="nc-ttl">PMI Asia en Ebullición: Corea en Máximo de 5 Años; Empresas Acumulan Inventarios de Guerra</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">La producción fabril de Asia se expandió con constancia en mayo. Las empresas acumulan reservas como <strong>amortiguador frente a choques de suministro</strong>. <span class="stat-g">India 55.0</span> <span class="stat-g">Corea 54.8</span> <span class="stat-g">Japón 54.5</span> <span class="stat-g">China 51.8</span></p><br>
+        <p class="nc-txt"><strong>Corea del Sur:</strong> ritmo más rápido en cinco años. Exportaciones crecen al ritmo anual más fuerte en <strong>más de cuatro décadas</strong>, respaldadas por ventas récord de chips. <strong>India:</strong> presiones de costos de las más intensas en casi cuatro años, con la guerra citada como factor.</p><br>
+        <p class="nc-txt"><strong>Señal de alerta en China:</strong> pedidos de exportación se contrajeron por primera vez en cinco meses — señal temprana de que el alza energética pesa sobre la demanda global de productos chinos. Empleo cayó a <span class="stat">mínimo de 5 meses</span>.</p>
+      </div>
+    </div>
+
+    <div class="nc">
+      <div class="nc-head">
+        <div class="nc-num">03</div>
+        <div class="nc-cat">Fintech · Monedas Digitales</div>
+        <div class="nc-ttl">BCE Alerta: Stablecoins Dolarizadas Amenazan la Soberanía Monetaria del Euro</div>
+      </div>
+      <div class="nc-body">
+        <p class="nc-txt">Isabel Schnabel (BCE, 1 junio 2026, Seúl) advirtió que el crecimiento de stablecoins podría afianzar el <strong>dominio internacional del dólar</strong>. La cap. total del mercado de stablecoins alcanzó un récord de <span class="stat">~$320,000M</span>. USDT + USDC dominan; las stablecoins en euros: apenas <span class="stat">~€500M</span>.</p><br>
+        <p class="nc-txt"><strong>El riesgo:</strong> la dolarización surge como <em>subproducto de la adopción tecnológica</em>, no por una elección deliberada de divisa. El dominio del dólar se refuerza por efectos de red, escala y ventajas del first-mover — no necesariamente por fundamentos económicos más sólidos.</p><br>
+        <p class="nc-txt">La respuesta del BCE: avanzar en un <strong>euro digital (CBDC minorista)</strong> que preserve el ancla pública del dinero y reduzca la dependencia de proveedores no europeos. El uso persistente de stablecoins en dólares podría reforzar la facturación en USD y <strong>limitar el papel del euro en las finanzas tokenizadas</strong>.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ANÁLISIS EXTENDIDO ══ -->
+<section class="ext-s">
+  <div class="lbl">Más Noticias Relevantes</div>
+  <div class="ttl">Análisis Extendido</div>
+  <div class="ext-g">
+
+    <div class="ec">
+      <div class="ec-cat">✈️ Conflicto · Ucrania · IA</div>
+      <div class="ec-ttl">Palantir PRISMA: Primera Confirmación Visual del Sistema IA que Coordina Miles de Drones en Ucrania</div>
+      <div class="ec-body">
+        CNN obtuvo acceso a un puesto avanzado del comando de inteligencia militar ucraniano. Las imágenes muestran el software <strong>PRISMA de Palantir</strong> operando en vivo durante ataques activos con drones kamikaze de largo alcance en el interior de Rusia.<br><br>
+        PRISMA rastrea y coordina simultáneamente <strong>miles de drones</strong> (reconocimiento, señuelo y ataque) en una sola pantalla. Ingiere datos en tiempo real de imágenes satelitales, telemetría de ataques previos y emisiones de radar enemigas. <strong>Identifica vulnerabilidades en defensas aéreas rusas</strong> y calcula rutas de vuelo óptimas para explotar huecos. Esta es la <strong>primera confirmación visual</strong> de PRISMA en uso operativo. Palantir apoya a Ucrania desde 2022.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Palantir</span><span class="etag">PRISMA</span><span class="etag">Ucrania</span><span class="etag">IA Militar</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🛡️ Seguridad · Hegseth · Shangri-La</div>
+      <div class="ec-ttl">Hegseth (Shangri-La): EE.UU. Listo para Reanudar Ataques y Puede Operar en Oriente Medio y Asia-Pacífico Simultáneamente</div>
+      <div class="ec-body">
+        El Secretario de Defensa Pete Hegseth, en el Diálogo Shangri-La (Singapur, 30 mayo), declaró que EE.UU. está <strong>listo para reanudar ataques contra Irán</strong> si no se alcanza un acuerdo. Afirmó que las reservas estadounidenses son más que suficientes y que la base industrial de defensa se está "<strong>sobrealimentando</strong>" para fabricar 2, 3 o 4 veces las municiones normales.<br><br>
+        Hegseth declaró que EE.UU. puede centrarse <strong>simultáneamente</strong> en Oriente Medio y en Asia-Pacífico. Describió a Trump como "<strong>paciente y deseoso de un gran acuerdo</strong>" que garantice que Irán no obtenga un arma nuclear. EE.UU. también realizó ataques defensivos en Isla Qeshm y Goruk tras el derribo de un dron MQ-1.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Hegseth</span><span class="etag">Irán</span><span class="etag">Asia-Pacífico</span><span class="etag">Defensa</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">⚡ Energía · Riesgo Global</div>
+      <div class="ec-ttl">Reservas Mundiales de Petróleo al Límite: "Zona Roja" Posible para Mediados de Junio</div>
+      <div class="ec-body">
+        AIE, FMI, Banco Mundial y OMC advierten que el conflicto tensiona los suministros energéticos mundiales, afectando con más fuerza a <strong>economías vulnerables</strong>. Las reservas mundiales de petróleo podrían estar tan agotadas para <strong>mediados de junio</strong> que surjan escaseces reales.<br><br>
+        El Brent subió un <strong>+2.5%</strong> hasta $93.40, impulsado por el nuevo fuego cruzado del fin de semana, pero sigue muy por debajo de los $100. Los dos países intercambiaron ataques la semana pasada: Irán apuntó a una base aérea de EE.UU. tras ataques estadounidenses cerca del estrecho. Las empresas japonesas registraron el mayor aumento de costos de insumos desde <strong>septiembre de 2022</strong>. Precios de venta en máximo desde <strong>octubre de 2022</strong>.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">Petróleo</span><span class="etag">Brent</span><span class="etag">AIE</span><span class="etag">Zona Roja</span></div>
+    </div>
+
+    <div class="ec">
+      <div class="ec-cat">🤖 IA · Manufactura · Chips</div>
+      <div class="ec-ttl">Auge de IA Impulsa Fábricas de Corea, Japón y Taiwán; Exportaciones Coreanas en Máximos de 40 Años</div>
+      <div class="ec-body">
+        La creciente demanda de inversión relacionada con la inteligencia artificial está ayudando a las economías de <strong>Corea del Sur, Japón y Taiwán</strong>. Las exportaciones de Corea del Sur crecieron a su <strong>ritmo anual más fuerte en más de cuatro décadas</strong>, respaldadas por ventas récord de chips de memoria de alta banda (HBM).<br><br>
+        El PMI manufacturero de Corea alcanzó <strong>54.8</strong>, su ritmo más rápido en cinco años. India alcanzó <strong>55.0</strong>, el más rápido en tres meses. India también registró una de las presiones de costos más intensas en casi cuatro años, impulsadas por mayores gastos en energía, combustible, materiales y transporte — con la guerra citada directamente como factor contribuyente.
+      </div>
+      <div style="margin-top:12px;"><span class="etag">IA</span><span class="etag">Chips HBM</span><span class="etag">Corea</span><span class="etag">India</span><span class="etag">Taiwan</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo">ATFX</div>
+  <div class="f-sub">MARKET INTELLIGENCE · WEEKLY REPORT · JUNIO 2026</div>
+  <div class="f-div"></div>
+  <div class="f-disc">
+    <strong>AVISO DE RIESGO:</strong> La negociación de divisas (Forex) y contratos por diferencia (CFDs) en productos como índices, materias primas, acciones y criptomonedas conlleva un alto nivel de riesgo y puede no ser adecuada para todos los inversores. El valor de su inversión puede tanto aumentar como disminuir, y podría recibir menos de lo que invirtió originalmente. Antes de operar, asegúrese de comprender completamente los riesgos involucrados y, si es necesario, busque asesoramiento financiero independiente. Los CFDs son instrumentos complejos que conllevan un alto riesgo de perder dinero rápidamente debido al apalancamiento.
+    <br><br>
+    <strong>AVISO LEGAL:</strong> Este informe ha sido preparado únicamente con fines informativos y no constituye asesoramiento de inversión, recomendación ni oferta o solicitud de compra o venta de ningún instrumento financiero. La información se ha obtenido de fuentes consideradas fiables, pero ATFX no garantiza su exactitud, integridad ni actualidad. Las opiniones son de los analistas en la fecha de publicación y están sujetas a cambios sin previo aviso. El rendimiento pasado no es indicativo de resultados futuros.
+    <br><br>
+    © 2026 ATFX. Todos los derechos reservados. ATFX es un nombre comercial de AT Global Markets (UK) Ltd, autorizado y regulado por la Financial Conduct Authority (FCA) del Reino Unido.
+  </div>
+</footer>
+
+</div>
